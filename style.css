@@ -1,0 +1,406 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background-color: #f8f9fa; /* Um cinza muito claro, quase branco */
+    color: #343a40; /* Cor de texto padrão mais escura para contraste */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o tema */
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #1a1a1a; /* Preto mais suave para o fundo */
+    color: #f8f9fa; /* Cor de texto clara */
+}
+
+body.dark-mode header {
+    background-color: #0d4a2c; /* VERDE ESCURO para o cabeçalho */
+    background-image: linear-gradient(to right, #0d4a2c, #14613d); /* Gradiente com tons mais escuros */
+}
+
+body.dark-mode header h1 {
+    color: #f8f9fa; /* Título claro */
+}
+
+body.dark-mode header .lead {
+    color: #ebebeb !important; /* Amarelo da tagline permanece vibrante */
+}
+
+body.dark-mode nav.navbar {
+    background-color: #0d4a2c !important; /* Navbar com o verde escuro */
+}
+
+body.dark-mode nav .nav-link:hover,
+body.dark-mode nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo claro no hover/ativo */
+}
+
+body.dark-mode .bg-light {
+    background-color: #2c2c2c !important; /* Seções claras em modo escuro */
+    color: #f8f9fa;
+}
+
+body.dark-mode .text-dark {
+    color: #f8f9fa !important; /* Texto escuro em modo escuro fica claro */
+}
+
+/* Garante que os títulos h2/h3 fiquem verdes mesmo no modo escuro, com um tom mais escuro */
+body.dark-mode h2.display-5,
+body.dark-mode h3.display-6 {
+    color: #218838 !important; /* VERDE ESCURO para os títulos */
+}
+
+/* Mantém o verde para os títulos específicos */
+body.dark-mode h2.display-5.text-primary,
+body.dark-mode h3.display-6.text-primary {
+    color: #218838 !important; /* VERDE ESCURO para os títulos primários */
+}
+
+body.dark-mode .bg-info.bg-opacity-10 {
+    background-color: #0b5134 !important; /* NOVO VERDE MAIS ESCURO PARA O CARTÃO "AGRINHO 2025" NO MODO ESCURO */
+    color: #f8f9fa;
+}
+
+body.dark-mode .card.border-success {
+    border-color: #218838 !important; /* Borda do card com o verde escuro */
+    background-color: #3a3a3a; /* Fundo do card escuro */
+    color: #f8f9fa;
+}
+
+body.dark-mode .card-title.text-success {
+    color: #218838 !important; /* Título do card com o verde escuro */
+}
+
+body.dark-mode .card-text.text-muted {
+    color: #ced4da !important; /* Texto claro para o card */
+}
+
+body.dark-mode .btn-outline-success {
+    color: #218838; /* Botão outline com o verde escuro */
+    border-color: #218838;
+}
+
+body.dark-mode .btn-outline-success:hover {
+    background-color: #218838; /* Fundo no hover com o verde escuro */
+    color: white;
+}
+
+body.dark-mode .bg-dark {
+    background-color: #121212 !important; /* Fundo mais escuro ainda para contraste */
+}
+
+body.dark-mode footer {
+    background-color: #121212 !important;
+    color: #adb5bd;
+}
+
+
+/* Header */
+header {
+    background-color: #198754; /* Um verde um pouco mais vibrante */
+    background-image: linear-gradient(to right, #198754, #28a745); /* Gradiente sutil */
+    color: white;
+    padding: 80px 0; /* Padding maior para mais destaque */
+}
+
+header h1 {
+    font-size: 3.5rem; /* Tamanho maior para o título principal */
+    font-weight: 700; /* Negrito mais forte */
+}
+
+header .lead {
+    color: #ebebeb !important; /* Amarelo mais claro para o lead */
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header .btn-success {
+    background-color: #198754; /* Botão de destaque amarelo */
+    border-color: #198754;
+    color: white; /* Texto do botão mais escuro */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header .btn-success:hover {
+    background-color: #157347; /* Amarelo mais escuro no hover */
+    border-color: #157347;
+    transform: translateY(-2px); /* Pequena animação no hover */
+}
+
+/* Navegação */
+nav.sticky-top {
+    top: 0;
+    z-index: 1020; /* Garante que a nav fique acima de outros elementos ao rolar */
+}
+
+nav .navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem; /* Mais espaçamento para os links */
+    transition: all 0.3s ease;
+}
+
+nav .nav-link:hover,
+nav .nav-link.active {
+    color: #f8f9fa !important;
+    background-color: rgba(255, 255, 255, 0.1); /* Um leve background no hover/ativo */
+    border-radius: 5px;
+}
+
+nav .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline; /* Destacar o ativo */
+}
+
+/* Main Content Sections */
+main section {
+    padding: 60px 0; /* Padding uniforme para as seções */
+}
+
+.bg-light {
+    background-color: #f8f9fa !important; /* Manter leve */
+}
+
+/* Para a seção de "Agrinho 2025: Festejando Conexão Campo Cidade", verde suave */
+.bg-info.bg-opacity-10:not(.dark-mode) { /* Aplica somente quando NÃO estiver em dark-mode */
+    background-color: rgba(40, 167, 69, 0.05) !important; /* Verde suave para diferenciar */
+}
+
+
+.bg-dark {
+    background-color: #212529 !important; /* Escuro padrão do Bootstrap */
+}
+
+h2.display-5, h3.display-6 {
+    font-weight: 600;
+    color: #28a745; /* Cor primária para títulos: VERDE CLARO */
+}
+
+/* Garantir que títulos com .text-primary fiquem VERDES no modo CLARO */
+h2.display-5.text-primary, h3.display-6.text-primary {
+    color: #28a745 !important; /* Volta para o verde padrão no modo claro */
+}
+
+
+/* Imagens */
+.img-fluid.rounded {
+    border-radius: 0.75rem !important; /* Arredondamento maior */
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; /* Sombra sutil */
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; /* Sombra mais visível */
+}
+
+/* Seção de Objetivos - Cards */
+.card.border-success {
+    border: 2px solid #28a745 !important;
+    transition: all 0.3s ease;
+}
+
+.card.border-success:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.card-title.text-success {
+    color: #28a745 !important;
+}
+
+.icon-agrinho {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Garante que o ícone caiba sem cortar */
+}
+
+/* Cards de Áreas Temáticas */
+.card.h-100 .card-img-top {
+    height: 250px; /* Aumentei um pouco a altura para as imagens ficarem melhores */
+    object-fit: cover;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-text.flex-grow-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+}
+
+.card .btn-success {
+    width: auto; /* Deixa o botão se ajustar ao conteúdo */
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do card */
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 450px; /* Altura fixa para o carrossel */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo mais escuro para melhor contraste */
+    padding: 20px;
+    border-radius: 0.5rem;
+    bottom: 20px; /* Afasta um pouco da borda inferior */
+    left: 10%;
+    right: 10%;
+    max-width: 80%; /* Limita a largura para melhor leitura */
+    margin: 0 auto;
+}
+
+.carousel-caption h5.display-6 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.carousel-caption p.lead {
+    font-size: 1.25rem;
+    color: #e9ecef;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Largura menor para os controles */
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #212529 !important; /* Preto mais escuro para o footer */
+    color: #adb5bd; /* Um cinza mais claro para o texto */
+    padding: 30px 0;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Botão Voltar ao Topo e Alternar Tema */
+#btnVoltarAoTopo,
+#btnAlternarTema {
+    display: block; /* Garante que estejam visíveis por padrão, JavaScript vai controlar a visibilidade do topo */
+    position: fixed; /* Fixa na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    z-index: 99; /* Garante que fique acima de outros elementos */
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s, transform 0.3s ease; /* Adicionando transform para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50px; /* Largura fixa para ser um círculo perfeito */
+    height: 50px; /* Altura fixa */
+    display: flex; /* Para centralizar o SVG */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+#btnVoltarAoTopo {
+    background-color: #28a745; /* Cor verde do Bootstrap (modo claro) */
+    color: white;
+    right: 20px; /* Posiciona à direita */
+    display: none; /* Inicia oculto, JS vai mostrar */
+}
+
+#btnVoltarAoTopo:hover {
+    background-color: #218838; /* Verde mais escuro no hover (modo claro) */
+    opacity: 0.9;
+    transform: translateY(-3px); /* Efeito de flutuar */
+}
+
+#btnAlternarTema {
+    right: 80px; /* Posiciona o botão de tema à esquerda do botão de topo */
+    background-color: #343a40; /* Cor escura padrão (no modo claro) */
+    color: white;
+}
+
+body.dark-mode #btnAlternarTema {
+    background-color: #218838; /* VERDE ESCURO para o botão de tema no modo escuro */
+    color: white; /* Texto/ícone branco no modo escuro para o botão de tema */
+}
+
+#btnAlternarTema:hover {
+    background-color: #1d2124; /* Mais escuro no hover (no modo claro) */
+    opacity: 0.9;
+    transform: translateY(-3px); /* Efeito de flutuar */
+}
+
+body.dark-mode #btnAlternarTema:hover {
+    background-color: #1a6b2c; /* VERDE AINDA MAIS ESCURO no hover para o botão no modo escuro */
+}
+
+
+/* Responsividade adicional se necessário */
+@media (max-width: 767.98px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header .lead {
+        font-size: 1.2rem;
+    }
+    .carousel-caption {
+        padding: 10px;
+        bottom: 5px;
+        max-width: 90%;
+    }
+    .carousel-caption h5.display-6 {
+        font-size: 1.5rem;
+    }
+    .carousel-caption p.lead {
+        font-size: 0.9rem;
+    }
+    /* Ajuste para botões flutuantes em telas menores */
+    #btnVoltarAoTopo,
+    #btnAlternarTema {
+        bottom: 15px;
+        font-size: 1.2rem;
+        padding: 8px 12px;
+        width: 45px; /* Ajusta tamanho para telas menores */
+        height: 45px; /* Ajusta tamanho para telas menores */
+    }
+    #btnVoltarAoTopo {
+        right: 15px;
+    }
+    #btnAlternarTema {
+        right: 65px; /* Ajusta a posição para não sobrepor */
+    }
+}
+
+body.dark-mode .text-muted {
+    color: #cfcfcf !important;
+}
+
+/* Botões verdes personalizados */
+.btn-success {
+    background-color: #198754 !important;
+    border: 2px solid #198754 !important;
+    color: #fff !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #157347 !important;
+    border-color: #157347 !important;
+    color: #fff !important;
+}
+
+/* Regra específica para o título do Agrinho no Dark Mode */
+body.dark-mode h2.titulo-agrinho {
+    color: #cacaca !important; /* Preto */
+}
